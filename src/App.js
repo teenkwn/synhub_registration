@@ -1,23 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
+import {useEffect, useState} from 'react';
+import Form from './Pages/Form';
+import firestore from './Database/firebase';
 
 function App() {
+  const userRef = firestore.collection('users');
+  const [data, setData] = useState([]);
+  const allData = [];
+  const getData = () => {
+    userRef.get().then((snapshot) => {
+      snapshot.forEach((doc) => {
+        allData.push({id: doc.id, ...doc.data()})
+        console.log(doc.data().Firstname)
+        console.log(doc.data().Lastname)
+      })
+      console.log(allData)
+      setData(allData);
+    })
+  }
+
+  useEffect(getData,[])
+  console.log(data);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Form/>
+      {/* <div>
+        {data.map(x => <p key={x.id}>Name: {x.Fullname} Fullname: {x.Lastname}</p>)}
+      </div> */}
     </div>
   );
 }
