@@ -8,6 +8,10 @@
     font-size: .75rem;
 }
 
+.from {
+    display: flex;
+}
+
 .form-logo {
     margin-top: 30px;
 }
@@ -21,6 +25,9 @@
     width: 200px;
     height: 40px;
     margin-left: 40px;
+}
+.form-add-margin {
+    margin-left: 10px;
 }
 
 .form-info {
