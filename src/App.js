@@ -1,10 +1,10 @@
 import './App.css';
 import {useEffect, useState} from 'react';
-import Form from './Pages/Form';
+import Form from './Form';
 import firestore from './Database/firebase';
 
 function App() {
-  const userRef = firestore.collection('users');
+  const userRef = firestore.firestore().collection('users');
   const [data, setData] = useState([]);
   const allData = [];
   const getData = () => {
@@ -21,6 +21,7 @@ function App() {
 
   useEffect(getData,[])
   console.log(data);
+
   return (
     <div className="App">
       <Form/>
