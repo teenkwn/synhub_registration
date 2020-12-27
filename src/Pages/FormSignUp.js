@@ -9,35 +9,6 @@ import useForm from '../useForm';
 
 function FormSignUp({submitForm}) {
     const {handleChange, values,handleSubmit, errors} = useForm(submitForm,validate);
-    const userRef = firestore.firestore().collection('users');
-
-    // function submitForm(e) {
-    //     e.preventDefault();
-
-    //     userRef.add({
-    //         FullName: values.fullName,
-    //     })
-    //     .then(function(docRef) {
-    //         ("Document written with ID: ", docRef.id);
-    //     })
-    //     .catch(function(error) {
-    //         console.error("Error adding document: ", error);
-    //     });
-    // }
-    
-    // userRef.get().then((querySnapshot) => {
-    //     querySnapshot.forEach((doc) => {
-    //         // console.log(`${doc.id} => $doc.data()`);
-    //     })
-    // });
-
-    // userRef.doc('RoSEUaUXQ40Tz1tWb6OB').update({
-    //     "FullName": "haha",
-    // })
-    // .then(function() {
-    //     console.log("Document successfully updated!");
-    // });
-    
   return (
     <form className="form-root">
         <div className="form-logo">
@@ -109,61 +80,61 @@ function FormSignUp({submitForm}) {
                     <div>อยู่ในอุตสาหกรรมใด</div>
                     <div>
                         <div class="form-check">
-                            <input class="form-check-input position-static" type="radio" name="industry" id="blankRadio1" value="Smart farm/ Agriculture" aria-label="..." onChange={handleChange} ></input>
+                            <input class="form-check-input position-static" type="radio" name="industry" id="blankRadio1" value="smartFarmAgriculture" aria-label="..." onChange={handleChange} ></input>
                             <label class="form-check-label form-add-margin" for="exampleRadios1">
                                 Smart farm/ Agriculture
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input position-static" type="radio" name="industry" id="blankRadio1" value="Food and beverage" aria-label="..." onChange={handleChange}></input>
+                            <input class="form-check-input position-static" type="radio" name="industry" id="blankRadio1" value="foodAndBeverage" aria-label="..." onChange={handleChange}></input>
                             <label class="form-check-label form-add-margin" for="exampleRadios2">
                                 Food and beverage
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input position-static" type="radio" name="industry" id="blankRadio1" value="Consumer product" aria-label="..." onChange={handleChange}></input>
+                            <input class="form-check-input position-static" type="radio" name="industry" id="blankRadio1" value="consumerProduct" aria-label="..." onChange={handleChange}></input>
                             <label class="form-check-label form-add-margin" for="exampleRadios2">
                                 Consumer product
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input position-static" type="radio" name="industry" id="blankRadio1" value="Financial" aria-label="..." onChange={handleChange}></input>
+                            <input class="form-check-input position-static" type="radio" name="industry" id="blankRadio1" value="financial" aria-label="..." onChange={handleChange}></input>
                             <label class="form-check-label form-add-margin" for="exampleRadios2">
                                 Financial
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input position-static" type="radio" name="industry" id="blankRadio1" value="Property and Construction" aria-label="..." onChange={handleChange}></input>
+                            <input class="form-check-input position-static" type="radio" name="industry" id="blankRadio1" value="propertyAndConstruction" aria-label="..." onChange={handleChange}></input>
                             <label class="form-check-label form-add-margin" for="exampleRadios2">
                                 Property and Construction
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input position-static" type="radio" name="industry" id="blankRadio1" value="Resource" aria-label="..." onChange={handleChange}></input>
+                            <input class="form-check-input position-static" type="radio" name="industry" id="blankRadio1" value="resource" aria-label="..." onChange={handleChange}></input>
                             <label class="form-check-label form-add-margin" for="exampleRadios2">
                                 Resource
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input position-static" type="radio" name="industry " id="blankRadio1" value="Communication " aria-label="..." onChange={handleChange}></input>
+                            <input class="form-check-input position-static" type="radio" name="industry " id="blankRadio1" value="communication " aria-label="..." onChange={handleChange}></input>
                             <label class="form-check-label form-add-margin" for="exampleRadios2">
                                 Communication 
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input position-static" type="radio" name="industry" id="blankRadio1" value="System Integrator " aria-label="..." onChange={handleChange}></input>
+                            <input class="form-check-input position-static" type="radio" name="industry" id="blankRadio1" value="systemIntegrator" aria-label="..." onChange={handleChange}></input>
                             <label class="form-check-label form-add-margin" for="exampleRadios2">
                                 System Integrator 
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input position-static" type="radio" name="industry" id="blankRadio1" value="Mobility" aria-label="..." onChange={handleChange}></input>
+                            <input class="form-check-input position-static" type="radio" name="industry" id="blankRadio1" value="mobility" aria-label="..." onChange={handleChange}></input>
                             <label class="form-check-label form-add-margin" for="exampleRadios2">
                                 Mobility
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input position-static" type="radio" name="industry" id="blankRadio1" value="Services" aria-label="..." onChange={handleChange}></input>
+                            <input class="form-check-input position-static" type="radio" name="industry" id="blankRadio1" value="services" aria-label="..." onChange={handleChange}></input>
                             <label class="form-check-label form-add-margin" for="exampleRadios2">
                                 Services
                             </label>
@@ -173,7 +144,7 @@ function FormSignUp({submitForm}) {
                 <div>
                     <div>Phone Number*</div>
                     <div className="phonenumber-box">
-                        <input type="text" placeholder="+66" className="box-text" name="phoneNumber" value={values.phoneNumber} onChange={handleChange} ></input>
+                        <input type="text" placeholder="082-222-2222" className="box-text" name="phoneNumber" value={values.phoneNumber} onChange={handleChange} ></input>
                         {errors.phoneNumber && <p className="error_alert">{errors.phoneNumber}</p>}
                     </div>
                 </div>
@@ -203,67 +174,67 @@ function FormSignUp({submitForm}) {
                     <div>สนใจพัฒนาด้านใดเป็นพิเศษ</div>
                     <div>
                         <div class="form-check">
-                            <input class="form-check-input position-static" type="radio" name="improve" id="blankRadio1" value="Creativity" aria-label="..." onChange={handleChange} ></input>
+                            <input class="form-check-input position-static" type="radio" name="improve" id="blankRadio1" value="creativity" aria-label="..." onChange={handleChange} ></input>
                             <label class="form-check-label form-add-margin" for="exampleRadios1">
                                 Creativity
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input position-static" type="radio" name="improve" id="blankRadio1" value="Leadership Ability" aria-label="..." onChange={handleChange}></input>
+                            <input class="form-check-input position-static" type="radio" name="improve" id="blankRadio1" value="leadershipAbility" aria-label="..." onChange={handleChange}></input>
                             <label class="form-check-label form-add-margin" for="exampleRadios2">
                                 Leadership Ability
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input position-static" type="radio" name="improve" id="blankRadio1" value="Design Thinking" aria-label="..." onChange={handleChange}></input>
+                            <input class="form-check-input position-static" type="radio" name="improve" id="blankRadio1" value="designThinking" aria-label="..." onChange={handleChange}></input>
                             <label class="form-check-label form-add-margin" for="exampleRadios2">
                                 Design Thinking
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input position-static" type="radio" name="improve" id="blankRadio1" value="Agile" aria-label="..." onChange={handleChange}></input>
+                            <input class="form-check-input position-static" type="radio" name="improve" id="blankRadio1" value="agile" aria-label="..." onChange={handleChange}></input>
                             <label class="form-check-label form-add-margin" for="exampleRadios2">
                                 Agile 
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input position-static" type="radio" name="improve" id="blankRadio1" value="Pitching Skill" aria-label="..." onChange={handleChange}></input>
+                            <input class="form-check-input position-static" type="radio" name="improve" id="blankRadio1" value="pitchingShill" aria-label="..." onChange={handleChange}></input>
                             <label class="form-check-label form-add-margin" for="exampleRadios2">
                                 Pitching Skill
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input position-static" type="radio" name="improve" id="blankRadio1" value="Coding" aria-label="..." onChange={handleChange}></input>
+                            <input class="form-check-input position-static" type="radio" name="improve" id="blankRadio1" value="coding" aria-label="..." onChange={handleChange}></input>
                             <label class="form-check-label form-add-margin" for="exampleRadios2">
                                 Coding
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input position-static" type="radio" name="improve" id="blankRadio1" value="Data Science" aria-label="..." onChange={handleChange}></input>
+                            <input class="form-check-input position-static" type="radio" name="improve" id="blankRadio1" value="dataScience" aria-label="..." onChange={handleChange}></input>
                             <label class="form-check-label form-add-margin" for="exampleRadios2">
                                 Data Science
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input position-static" type="radio" name="improve" id="blankRadio1" value="Digital Marketing" aria-label="..." onChange={handleChange}></input>
+                            <input class="form-check-input position-static" type="radio" name="improve" id="blankRadio1" value="digitalMarketing" aria-label="..." onChange={handleChange}></input>
                             <label class="form-check-label form-add-margin" for="exampleRadios2">
                                 Digital Marketing
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input position-static" type="radio" name="improve" id="blankRadio1" value="Marketing Communication" aria-label="..." onChange={handleChange}></input>
+                            <input class="form-check-input position-static" type="radio" name="improve" id="blankRadio1" value="marketingCommunication" aria-label="..." onChange={handleChange}></input>
                             <label class="form-check-label form-add-margin" for="exampleRadios2">
                                 Marketing Communication
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input position-static" type="radio" name="improve" id="blankRadio1" value="Branding" aria-label="..." onChange={handleChange}></input>
+                            <input class="form-check-input position-static" type="radio" name="improve" id="blankRadio1" value="branding" aria-label="..." onChange={handleChange}></input>
                             <label class="form-check-label form-add-margin" for="exampleRadios2">
                                 Branding
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input position-static" type="radio" name="improve" id="blankRadio1" value="Business Model" aria-label="..." onChange={handleChange}></input>
+                            <input class="form-check-input position-static" type="radio" name="improve" id="blankRadio1" value="businessModel" aria-label="..." onChange={handleChange}></input>
                             <label class="form-check-label form-add-margin" for="exampleRadios2">
                                 Business Model
                             </label>
@@ -279,70 +250,70 @@ function FormSignUp({submitForm}) {
                     <div>Interested in our product*</div>
                     <div>
                             <div class="form-check">
-                            <input class="form-check-input" type="radio" name="interest" id="exampleRadios1" value="Edutech Workshop" onChange={ handleChange}></input>
+                            <input class="form-check-input" type="radio" name="interest" id="exampleRadios1" value="eduTechWorkshop" onChange={ handleChange}></input>
                             <label class="form-check-label" for="exampleRadios1">
                                 Edutech Workshop
                             </label>
                             </div>
 
                             <div class="form-check">
-                            <input class="form-check-input" type="radio" name="interest" id="exampleRadios2" value="Energy Management" onChange={handleChange}></input>
+                            <input class="form-check-input" type="radio" name="interest" id="exampleRadios2" value="energyManagement" onChange={handleChange}></input>
                             <label class="form-check-label" for="exampleRadios1">
                                 Energy Management
                             </label>
                             </div>
 
                             <div class="form-check">
-                            <input class="form-check-input" type="radio" name="interest" id="exampleRadios1" value="PCB/PCBA" onChange={handleChange}></input>
+                            <input class="form-check-input" type="radio" name="interest" id="exampleRadios1" value="pcbAndpcba" onChange={handleChange}></input>
                             <label class="form-check-label" for="exampleRadios2">
                                 PCB/PCBA
                             </label>
                             </div>
 
                             <div class="form-check">
-                            <input class="form-check-input" type="radio" name="interest" id="exampleRadios2" value="Robotics" onChange={handleChange}></input>
+                            <input class="form-check-input" type="radio" name="interest" id="exampleRadios2" value="robotics" onChange={handleChange}></input>
                             <label class="form-check-label" for="exampleRadios2">
                                 Robotics
                             </label>
                             </div>
 
                             <div class="form-check">
-                            <input class="form-check-input" type="radio" name="interest" id="exampleRadios1" value="Smart Building" onChange={handleChange}></input>
+                            <input class="form-check-input" type="radio" name="interest" id="exampleRadios1" value="smartBuilding" onChange={handleChange}></input>
                             <label class="form-check-label" for="exampleRadios2">
                                 Smart Building
                             </label>
                             </div>
 
                             <div class="form-check">
-                            <input class="form-check-input" type="radio" name="interest" id="exampleRadios2" value="Smart Environment" onChange={handleChange}></input>
+                            <input class="form-check-input" type="radio" name="interest" id="exampleRadios2" value="smartEnvironment" onChange={handleChange}></input>
                             <label class="form-check-label" for="exampleRadios2">
                                 Smart Environment
                             </label>
                             </div>
 
                             <div class="form-check">
-                            <input class="form-check-input" type="radio" name="interest" id="exampleRadios1" value="Smart Health Products" onChange={handleChange}></input>
+                            <input class="form-check-input" type="radio" name="interest" id="exampleRadios1" value="smartHealthProducts" onChange={handleChange}></input>
                             <label class="form-check-label" for="exampleRadios2">
                                 Smart Health Products
                             </label>
                             </div>
 
                             <div class="form-check">
-                            <input class="form-check-input" type="radio" name="interest" id="exampleRadios2" value="Smart Juristic Platform" onChange={handleChange}></input>
+                            <input class="form-check-input" type="radio" name="interest" id="exampleRadios2" value="smartJuristicPlatform" onChange={handleChange}></input>
                             <label class="form-check-label" for="exampleRadios2">
                                 Smart Juristic Platform
                             </label>
                             </div>
 
                             <div class="form-check">
-                            <input class="form-check-input" type="radio" name="interest" id="exampleRadios1" value="Smart Lighting System" onChange={handleChange}></input>
+                            <input class="form-check-input" type="radio" name="interest" id="exampleRadios1" value="smartLightingSystem" onChange={handleChange}></input>
                             <label class="form-check-label" for="exampleRadios2">
                                 Smart Lighting System
                             </label>
                             </div>
 
                             <div class="form-check">
-                            <input class="form-check-input" type="radio" name="interest" id="exampleRadios2" value="Water Monitoring System" onChange={handleChange}></input>
+                            <input class="form-check-input" type="radio" name="interest" id="exampleRadios2" value="waterMonitoringSystem" onChange={handleChange}></input>
                             <label class="form-check-label" for="exampleRadios2">
                                 Water Monitoring System
                             </label>
